@@ -135,55 +135,27 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nisi sapiente iure consequuntur, aspernatur culpa optio iusto distinctio itaque nostrum obcaecati laborum? Distinctio quia, adipisci officiis inventore a placeat sunt.</p>
         <div class="row mx-auto container-fluid">
 
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured1.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Vans Shoes Old Skool (black/white)</h5>
-                <h4 class="p-price">72,95€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured2.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Fila Sneakers Arcade L Wmn White</h5>
-                <h4 class="p-price">59,00€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
+        <?php include("server/get_featured_products.php"); ?>
+
+        <?php while($row = $featured_products->fetch_assoc()){?>
+
 
             <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured3.jpg"/>
+                <img class="img-fluid mb-3" src="assets/img/<?php echo $row["product_image"] ?>"/>
                 <div class="star">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
-                <h5 class="p-name">Converse CHuck Taylor All Star Black</h5>
-                <h4 class="p-price">75,00€</h4>
-                <button class="buy-btn">Buy Now</button>
+                <h5 class="p-name"> <?php echo $row["product_name"] ?> </h5>
+                <h4 class="p-price"> <?php echo $row["product_price"] ?> </h4>
+                <a href="<?php echo "single_product.php?product_id=". $row["product_id"]; ?>"><button class="buy-btn">Buy Now</button></a>
             </div>
 
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured4.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">adidas Originals ADI2000 UNISEX Shoes</h5>
-                <h4 class="p-price">119,99€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
+            <?php } ?>
+
         </div>
         </div>
     </section>
