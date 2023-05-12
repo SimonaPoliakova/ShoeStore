@@ -557,8 +557,9 @@ h6{
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 5px 10px;
-  margin-right: 10px;
+  padding: 5px 5px;
+  margin-right: 0px;
+  width:50px;
 }
 
 .btn-edit:hover{
