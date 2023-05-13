@@ -52,7 +52,7 @@ else {
                 $_SESSION["user_email"] = $email;
                 $_SESSION["user_name"] = $name;
                 $_SESSION["logged_in"] = true;
-                header("location: account.php?register=Registration was successful");
+                header("location: account.php?register_success=Registration was successful");
             //account could not be created
             }else{
                 header("location: register.php?error=Could not create an account");

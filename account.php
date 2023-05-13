@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+include("server/connection.php");
 
 if(!isset($_SESSION["logged_in"])){
     header("location: login.php");
@@ -17,6 +18,36 @@ if(ISSET($_GET["logout"])){
     }
 }
 
+//change password 
+if(isset($_POST["change_password"])){
+
+        $password = $_POST["password"];
+        $confirmPassword = $_POST["confirmPassword"];
+        $user_email = $_POST["user_email"];
+
+        //if passwords match
+        if($password !== $confirmPassword){
+            header("location: account.php?error=Passswords do not match");
+        }
+
+        //if the  password is shorter than 6
+        else if(strlen($password) < 6){
+            header("location: account.php?error=Password must be at least 6 characters long");
+
+        //no errors
+        } else {
+        
+            $stmt = $conn->prepare("UPDATE users SET user_password=? WHERE user_email=?");
+            $stmt->bind_param("ss",md5($password),$user_email);
+
+            if($stmt->execute()){
+                header("location: account.php?message=Password has been changed successfully");
+            }else{
+                header("location: account.php?error=Could not change the password");
+            }
+        }
+
+}
 ?>
 
 
@@ -84,6 +115,8 @@ if(ISSET($_GET["logout"])){
 <section class="my-5 py-5">
     <div class="row container mx-auto">
         <div class="text-center mt-3 pt-5 col-lg-6 col-md-12 col-sm-12">
+        <p class="text-center" style="color:green"><?php if(isset($_GET["register_success"])){ echo $_GET["register_success"];} ?></p>
+        <p class="text-center" style="color:green"><?php if(isset($_GET["login_success"])){ echo $_GET["login_success"];} ?></p> 
             <h3 class="font-weight-bold">Account info</h3>
             <hr class="mx-auto">
             <div class="account-info">
@@ -95,7 +128,9 @@ if(ISSET($_GET["logout"])){
         </div>
 
         <div class="col-lg-6 col-md-12 col-sm-12">
-            <form id="account-form">
+            <form id="account-form" method="POST" action="account.php">
+                <p class="text-center" style="color:red"><?php if(isset($_GET["error"])){ echo $_GET["error"];} ?></p>
+                <p class="text-center" style="color:green"><?php if(isset($_GET["message"])){ echo $_GET["message"];} ?>
                 <h3>Change Password</h3>
                 <hr class="mx-auto">
                 <div class="form-group">
@@ -107,7 +142,7 @@ if(ISSET($_GET["logout"])){
                     <input type="password" class="form-control" id="account-password-confirm" name="confirmPassword" placeholder="Password" required>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Change Password" class="btn" id="change-pass-btn">
+                    <input type="submit" value="Change Password" class="btn" id="change-pass-btn" name="change_password">
                 </div>
             </form>
         </div>
