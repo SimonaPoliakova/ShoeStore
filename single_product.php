@@ -37,14 +37,14 @@ if(isset($_GET["product_id"])){
    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
     <div class="container">
         <img src="assets/img/logo.png" height="40"/>
-        <a class="navbar-brand" href="index.html">Shoe Store</a>
+        <a class="navbar-brand" href="index.php">Shoe Store</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="text-center collapse navbar-collapse nav-buttons" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-1 my-2">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
 
                 <li class="nav-item dropdown">
