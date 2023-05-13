@@ -62,7 +62,7 @@ if(!empty($_SESSION["cart"] && isset($_POST["checkout"]))){
                 </li>
 
                 <li class="nav-item">
-                    <a href="cart.html"><i class="nav-btns fas fa-shopping-bag"></i></a>
+                    <a href="cart.php"><i class="nav-btns fas fa-shopping-bag"></i></a>
                     <a href="account.html"><i class="nav-btns fas fa-user"></i></a>
                 </li>
 

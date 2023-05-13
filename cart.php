@@ -79,7 +79,7 @@ if(isset($_POST["add_to_cart"])) {
   calculateTotalCart();
 
 } else {
-  header("location: index.php");
+  //header("location: index.php");
 }
 
 ?>
@@ -136,7 +136,7 @@ if(isset($_POST["add_to_cart"])) {
                 </li>
 
                 <li class="nav-item">
-                    <a href="cart.html"><i class="nav-btns fas fa-shopping-bag"></i></a>
+                    <a href="cart.php"><i class="nav-btns fas fa-shopping-bag"></i></a>
                     <a href="account.html"><i class="nav-btns fas fa-user"></i></a>
                 </li>
 
