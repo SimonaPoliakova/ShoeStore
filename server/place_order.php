@@ -24,6 +24,7 @@ if (isset($_POST["place_order"])) {
 
     $stmt->execute();
 
+    //store order info in database
     $order_id = $stmt->insert_id;
 
 
@@ -36,6 +37,7 @@ if (isset($_POST["place_order"])) {
         $product_price = $product["product_price"];
         $product_quantity = $product["product_quantity"];
 
+        //store each single item in order_items database
         $stmt1 = $conn->prepare("INSERT INTO order_items(order_id, product_id, product_name, product_image,product_price, product_quantity, user_id, order_date)
                         VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
 
@@ -44,13 +46,11 @@ if (isset($_POST["place_order"])) {
         $stmt1->execute();
     }
 
-    //store order info in database
-
-    //store each single item in order_items database
-
-    //remove everything from cart
+    //remove everything from cart after paying
 
     //inform user whether everything is ok or not
+    header("location: ../payment.php?order_status=Order placed successfully.");
+
 
 }
 
