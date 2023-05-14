@@ -17,7 +17,7 @@ $products = $stmt->get_result();
      <section id="featured" class="my-5 pb-5">
         <div class="container text-center mt-5 py-5">
             <br>
-            <h3>Shop</h3>
+            <h3>Bestsellers</h3>
             <hr>
                 
         <div class="row mx-auto container-fluid">
