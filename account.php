@@ -48,6 +48,18 @@ if(isset($_POST["change_password"])){
         }
 
 }
+
+//orders
+if(isset($_SESSION["logged_in"])){
+
+    $user_id = $_SESSION["user_id"];
+    $stmt = $conn->prepare("SELECT * FROM orders WHERE user_id=?");
+    $stmt->bind_param("i",$user_id);
+    $stmt->execute();
+    $orders = $stmt->get_result();
+
+}
+
 ?>
 
 
@@ -122,7 +134,7 @@ if(isset($_POST["change_password"])){
             <div class="account-info">
                 <p>Name: <span><?php if(isset($_SESSION["user_name"])){echo $_SESSION["user_name"];} ?></span></p>
                 <p>Email: <span><?php if(isset($_SESSION["user_email"])){echo $_SESSION["user_email"];} ?></span></p>
-                <p><a href="" id="orders-btn">Your orders</a></p>
+                <p><a href="#orders" id="orders-btn">Your orders</a></p>
                 <p><a href="account.php?logout=1" id="logout-btn">Logout</a></p>
             </div>
         </div>
@@ -148,6 +160,56 @@ if(isset($_POST["change_password"])){
         </div>
     </div>
 </section>
+
+<!--orders-->
+<main>
+<section id="orders" class="orders container my-5 py-3">
+    <div class=" orders_h2 container mt-2">
+        <h2 class="font-weight-bold text-center">Your Orders</h2>
+</div>
+
+<table class="mt-5 pt-5">
+    <tr>
+        <th>Order id</th>
+        <th>Order cost</th>
+        <th>Order status</th>
+        <th>Order date</th>
+        <th>Order details</th>
+    </tr>
+    
+    <?php while($row = $orders->fetch_assoc()){?>
+            <tr>
+            <td>
+                <div class="product-info">
+                    <div>
+                        <p class="mt-3"><?php echo $row["order_id"]; ?></p>
+                    </div>
+                </div>
+            </td>
+
+            <td>
+                <span><?php echo $row["order_cost"]; ?></span>
+            </td>
+
+            <td>
+                <span><?php echo $row["order_cost"]; ?></span>
+            </td>
+
+            <td>
+                <span><?php echo $row["order_date"]; ?></span>
+            </td>
+
+            <td>
+                <form>
+                    <input class="btn order-details-btn" type="submit" value="details">
+                </form>
+            </td>
+
+        </tr>
+    <?php } ?>
+
+</table>
+</main>
 
     <!--footer-->
     <footer id="footer">

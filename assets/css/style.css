@@ -702,3 +702,62 @@ h6{
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   margin-top:100px;
 }
+
+/*orders*/
+#orders {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#orders .orders {
+  max-width: 800px;
+}
+
+#orders table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+#orders th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+#orders th {
+  background-color: #f2f2f2;
+}
+
+#orders tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#orders img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+}
+
+#orders .product-info {
+  display: flex;
+  align-items: center;
+}
+
+#orders .product-info div {
+  margin-left: 16px;
+}
+
+#orders .orders_h2{
+  margin: 50px;
+}
+
+.orders .order-details-btn{
+  color: white;
+  background-color: blue;
+}
