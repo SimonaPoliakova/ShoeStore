@@ -1,8 +1,7 @@
 <?php
 
 session_start();
-if(!empty($_SESSION["cart"] && isset($_POST["checkout"]))){
-    //let user in
+if(!empty($_SESSION["cart"])){ //if cart is not empty, let user in
 
     //send user to homepage
 }else{
@@ -23,6 +22,9 @@ if(!empty($_SESSION["cart"] && isset($_POST["checkout"]))){
 
     <div class="mx-auto container">
         <form id="checkout-form" method="POST" action="server/place_order.php">
+        <p class="text-center" style="color: red;"><?php if(isset($_GET["message"])){ echo $_GET["message"]; }?>
+            
+            </p>
 
             <div class="form-group checkout-small-element">
                 <label>Name</label>
