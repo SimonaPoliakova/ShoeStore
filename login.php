@@ -58,7 +58,7 @@ if(isset($_POST["login_btn"])){
 </head>
 <body>
 
-    <!--navbar-->
+     <!--navbar-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
   <div class="container">
       <img src="assets/img/logo.png" height="40"/>
@@ -72,15 +72,8 @@ if(isset($_POST["login_btn"])){
                   <a class="nav-link" href="index.php">Home</a>
               </li>
 
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownShop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Shop
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdownShop">
-                      <a class="dropdown-item" href="women.html">Women's shoes</a>
-                      <a class="dropdown-item" href="men.html">Men's shoes</a>
-                      <a class="dropdown-item" href="kids.html">Kids's shoes</a>
-                  </div>
+              <li class="nav-item">
+                  <a class="nav-link" href="shop.php">Shop</a>
               </li>
 
               <li class="nav-item">

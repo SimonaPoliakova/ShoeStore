@@ -84,51 +84,44 @@ else {
 </head>
 <body>
 
-   <!--navbar-->
-   <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
-    <div class="container">
-        <img src="assets/img/logo.png" height="40"/>
-        <a class="navbar-brand" href="index.php">Shoe Store</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="text-center collapse navbar-collapse nav-buttons" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-1 my-2">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php">Home</a>
-                </li>
+    <!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
+  <div class="container">
+      <img src="assets/img/logo.png" height="40"/>
+      <a class="navbar-brand" href="index.php">Shoe Store</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="text-center collapse navbar-collapse nav-buttons" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-1 my-2">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.php">Home</a>
+              </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownShop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Shop
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownShop">
-                        <a class="dropdown-item" href="women.html">Women's shoes</a>
-                        <a class="dropdown-item" href="men.html">Men's shoes</a>
-                        <a class="dropdown-item" href="kids.html">Kids's shoes</a>
-                    </div>
-                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="shop.php">Shop</a>
+              </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="bestsellers.html">Bestsellers</a>
-                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="bestsellers.html">Bestsellers</a>
+              </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+              </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact us</a>
-                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact us</a>
+              </li>
 
-                <li class="nav-item">
-                    <a href="cart.php"><i class="nav-btns fas fa-shopping-bag"></i></a>
-                    <a href="account.html"><i class="nav-btns fas fa-user"></i></a>
-                </li>
+              <li class="nav-item">
+                  <a href="cart.php"><i class="nav-btns fas fa-shopping-bag"></i></a>
+                  <a href="account.html"><i class="nav-btns fas fa-user"></i></a>
+              </li>
 
-            </ul>
-        </div>
-    </div>
+          </ul>
+      </div>
+  </div>
 </nav>
 
 <!--register-->

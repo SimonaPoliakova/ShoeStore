@@ -12,7 +12,7 @@
 <body>
 
    <!--navbar-->
-   <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3 fixed-top">
     <div class="container">
         <img src="assets/img/logo.png" height="40"/>
         <a class="navbar-brand" href="index.php">Shoe Store</a>
@@ -24,45 +24,38 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownShop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Shop
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownShop">
-                        <a class="dropdown-item" href="women.html">Women's shoes</a>
-                        <a class="dropdown-item" href="men.html">Men's shoes</a>
-                        <a class="dropdown-item" href="kids.html">Kids's shoes</a>
-                    </div>
+  
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.php">Shop</a>
                 </li>
-
+  
                 <li class="nav-item">
                     <a class="nav-link" href="bestsellers.html">Bestsellers</a>
                 </li>
-
+  
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">About</a>
                 </li>
-
+  
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact us</a>
                 </li>
-
+  
                 <li class="nav-item">
                     <a href="cart.php"><i class="nav-btns fas fa-shopping-bag"></i></a>
                     <a href="account.html"><i class="nav-btns fas fa-user"></i></a>
                 </li>
-
+  
             </ul>
         </div>
     </div>
-</nav>
-
+  </nav>
+  
      <!--Featured-->
      <section id="featured" class="my-5 pb-5">
         <div class="container text-center mt-5 py-5">
             <br>
-            <h3>Women's shoes</h3>
+            <h3>Shop</h3>
             <hr>
         <div class="row mx-auto container-fluid">
 
