@@ -1,3 +1,16 @@
+<?php
+
+include("server/connection.php");
+
+$stmt = $conn->prepare("SELECT * FROM products");
+
+$stmt->execute();
+
+$products = $stmt->get_result();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,213 +64,33 @@
     </div>
   </nav>
   
-     <!--Featured-->
+
+     <!--shop-->
      <section id="featured" class="my-5 pb-5">
         <div class="container text-center mt-5 py-5">
             <br>
             <h3>Shop</h3>
             <hr>
+                
         <div class="row mx-auto container-fluid">
 
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured1.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Vans Shoes Old Skool (black/white)</h5>
-                <h4 class="p-price">72,95€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured2.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Fila Sneakers Arcade L Wmn White</h5>
-                <h4 class="p-price">59,00€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
+        <?php while($row = $products->fetch_assoc()) {?>
 
             <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured3.jpg"/>
+                <img class="img-fluid mb-3" src="assets/img/<?php echo $row["product_image"]; ?>"/>
                 <div class="star">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
                 </div>
-                <h5 class="p-name">Converse CHuck Taylor All Star Black</h5>
-                <h4 class="p-price">75,00€</h4>
-                <button class="buy-btn">Buy Now</button>
+                <h5 class="p-name"><?php echo $row["product_name"]; ?></h5>
+                <h4 class="p-price"><?php echo $row["product_price"]; ?></h4>
+                <a class="btn buy-btn" href="single_product.php?product_id=<?php echo $row["product_id"];?>">Buy Now</a>
             </div>
 
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured4.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">adidas Originals ADI2000 UNISEX Shoes</h5>
-                <h4 class="p-price">119,99€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured1.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Vans Shoes Old Skool (black/white)</h5>
-                <h4 class="p-price">72,95€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured2.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Fila Sneakers Arcade L Wmn White</h5>
-                <h4 class="p-price">59,00€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured3.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Converse CHuck Taylor All Star Black</h5>
-                <h4 class="p-price">75,00€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured4.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">adidas Originals ADI2000 UNISEX Shoes</h5>
-                <h4 class="p-price">119,99€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured1.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Vans Shoes Old Skool (black/white)</h5>
-                <h4 class="p-price">72,95€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured2.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Fila Sneakers Arcade L Wmn White</h5>
-                <h4 class="p-price">59,00€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured3.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Converse CHuck Taylor All Star Black</h5>
-                <h4 class="p-price">75,00€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured4.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">adidas Originals ADI2000 UNISEX Shoes</h5>
-                <h4 class="p-price">119,99€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured1.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Vans Shoes Old Skool (black/white)</h5>
-                <h4 class="p-price">72,95€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured2.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Fila Sneakers Arcade L Wmn White</h5>
-                <h4 class="p-price">59,00€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured3.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">Converse CHuck Taylor All Star Black</h5>
-                <h4 class="p-price">75,00€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-
-            <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-                <img class="img-fluid mb-3" src="assets/img/featured4.jpg"/>
-                <div class="star">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <h5 class="p-name">adidas Originals ADI2000 UNISEX Shoes</h5>
-                <h4 class="p-price">119,99€</h4>
-                <button class="buy-btn">Buy Now</button>
-            </div>
+            <?php } ?>
 
         </div>
         

@@ -761,3 +761,8 @@ td {
   color: white;
   background-color: blue;
 }
+
+/*shop*/
+.buy-btn:hover{
+  color:white;
+}
