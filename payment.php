@@ -2,6 +2,11 @@
 
 session_start();
 
+if(isset($_POST["order_pay_btn"])){
+    $order_status = $_POST["order_status"];
+    $total_order_price = $_POST["total_order_price"];
+}
+
 ?>
 
 <!--header-->
@@ -13,16 +18,19 @@ session_start();
         <h2 class="form-weight-bold">Payment</h2>
     </div>
     <div class="mx-auto container text-center">
-        <p><?php if(isset($_GET["order_status"])){echo $_GET["order_status"];}?></p>
-        <p>Total payment: €<?php if (isset($_SESSION["total"])) {echo $_SESSION["total"];}?></p>
 
-        <?php if(isset($_SESSION["total"])) { ?>
-             <input class="btn btn-primary" type="submit" value="Pay Now">
-        <?php } ?>
+        <?php if(isset($_SESSION["total"]) && $_SESSION["total"] != 0){?>
+        <p>Total payment: €<?php echo $_SESSION["total"]; ?></p>
+        <input class="btn btn-primary" type="submit" value="Pay Now">
 
-        <?php if(isset($_GET["order_status"]) && $_GET["order_status"] == "pending payment") { ?>
-             <input class="btn btn-primary" type="submit" value="Pay Now">
-        <?php } ?>
+        <?php } else if(isset($_POST["order_status"]) && $_POST["order_status"] == "pending payment") {?>
+            <p>Total payment: €<?php echo $_POST["total_order_price"]; ?></p>
+            <input class="btn btn-primary" type="submit" value="Pay Now">
+            
+            <?php } else { ?>
+                <p>Your cart is empty</p>
+            <?php } ?>
+        
 
     </div>
 </section>
