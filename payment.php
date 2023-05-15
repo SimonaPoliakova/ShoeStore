@@ -13,7 +13,7 @@ if(isset($_POST["order_pay_btn"])){
 <?php include("layouts/header.php"); ?>
 
 <!--payment-->
-<section class="my-5 py-5">
+<section class="payment" class="my-5 py-5">
     <div class="text-center mt-3 pt-5">
         <h2 class="form-weight-bold">Payment</h2>
     </div>

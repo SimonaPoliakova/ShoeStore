@@ -283,6 +283,7 @@ h6{
   background-color: #f8f9fa;
   color: #212529;
   padding: 3rem 0;
+  
 }
 
 #footer .container{
@@ -656,7 +657,7 @@ h6{
 }
 
 #contact{
-  margin: 5px auto;
+  margin: 20px auto;
 }
 
 /*about*/
@@ -765,4 +766,9 @@ td {
 /*shop*/
 .buy-btn:hover{
   color:white;
+}
+
+
+.payment{
+  margin:190px;
 }

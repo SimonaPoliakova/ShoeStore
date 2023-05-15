@@ -2,6 +2,7 @@
 <?php include("layouts/header.php"); ?>
 
 <!--contact-->
+<br><br><br>
 <section id="contact" class="container my-5 py-5">
   <div class="container text-center mt-5">
     <h3>Contact us</h3>
@@ -17,6 +18,7 @@
     </p>
   </div>
 </section>
+<br><br>
 
 <!--footer-->
 <?php include("layouts/footer.php"); ?>
