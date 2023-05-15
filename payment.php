@@ -1,5 +1,5 @@
 <?php
-
+include("server/connection.php");
 session_start();
 
 if(isset($_POST["order_pay_btn"])){
@@ -26,7 +26,6 @@ if(isset($_POST["order_pay_btn"])){
         <?php } else if(isset($_POST["order_status"]) && $_POST["order_status"] == "pending payment") {?>
             <p>Total payment: €<?php echo $_POST["total_order_price"]; ?></p>
             <input class="btn btn-primary" type="submit" value="Pay Now">
-            
             <?php } else { ?>
                 <p>Your cart is empty</p>
             <?php } ?>
