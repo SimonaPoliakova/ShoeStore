@@ -51,7 +51,7 @@ if(!isset($_SESSION["admin_logged_in"])) {
       </div>
       <h2 class="form-weight-bold">Edit Order</h2>
 
-            <!--edit product form-->
+            <!--edit order form-->
 
                 <form id="edit-order-form" method="POST" action="edit_order.php">
 

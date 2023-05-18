@@ -72,6 +72,14 @@ if(!isset($_SESSION["admin_logged_in"])) {
         <p class="text-center" style="color: green;"><?php echo $_GET["delete_success"]; ?></p>
       <?php } ?>
 
+      <?php if(isset($_GET["product_added"])) { ?>
+        <p class="text-center" style="color: green;"><?php echo $_GET["product_added"]; ?></p>
+      <?php } ?>
+
+      <?php if(isset($_GET["product_not_added"])) { ?>
+        <p class="text-center" style="color: red;"><?php echo $_GET["product_not_added"]; ?></p>
+      <?php } ?>
+
       <div class="table-container">
         <div class="table-responsive">
           <table class="table table-striped table-sm">

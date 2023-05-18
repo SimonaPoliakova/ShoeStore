@@ -63,22 +63,22 @@ if(!isset($_SESSION["admin_logged_in"])) {
                     <input type="hidden" name="product_id" value="<?php echo $product["product_id"];?>">
                     
                     <div class="form-group">
-                        <label>Product Name</label>
+                        <label><b>Product Name</b></label>
                         <input type="text" class="form-control" id="product-name" name="title" placeholder="ProductName" value="<?php echo $product["product_name"]?>">
                     </div>
 
                     <div class="form-group">
-                        <label>Product Description</label>
+                        <label><b>Product Description</b></label>
                         <input type="text" class="form-control" id="product-description" name="description" placeholder="ProductDescription" value="<?php echo $product["product_description"]?>">
                     </div>
 
                     <div class="form-group">
-                        <label>Product Price</label>
+                        <label><b>Product Price</b></label>
                         <input type="text" class="form-control" id="product-price" name="price" placeholder="ProductPrice" value="<?php echo $product["product_price"]?>">
                     </div>
 
                     <div class="form-group">
-                        <label>ProductColor</label>
+                        <label><b>Product Color</b></label>
                         <input type="text" class="form-control" id="product-color" name="color" placeholder="ProductColor" value="<?php echo $product["product_color"]?>">
                     </div>
 
