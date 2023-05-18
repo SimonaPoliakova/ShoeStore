@@ -9,11 +9,19 @@ body {
     font-family: "Poppins", sans-serif;
   }
 
+ /*header*/
+
 .header {
-    
+    background-color: white;
     line-height: 70px;
     padding-left: 30px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.20);
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 a {
@@ -26,6 +34,7 @@ a {
     padding-right: 30px;
 }
 
+/*side menu*/
 ul {
     width: 14%;
     height: 100%;
@@ -41,7 +50,7 @@ ul li {
 }
 
 ul li a {
-    color: darkgreen;
+    color: black;
     font-weight: bold;
 }
 
@@ -49,6 +58,19 @@ ul li a:hover {
     color:yellowgreen;
     text-decoration: none;
 }
+
+@media (max-width: 767px) {
+  #sideBarMenu {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #sideBarMenu {
+    display: block;
+  }
+}
+
 
 
 /*login*/

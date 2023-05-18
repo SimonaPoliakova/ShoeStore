@@ -1,6 +1,5 @@
-<?php
-session_start();
-?>
+<?php session_start(); ?>
+<?php include("../server/connection.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +15,7 @@ session_start();
 <body>
 
 
-<header class="header">
+<header class="header sticky-header">
         <a class="col-md-3 col-lg-2 px-3" >Shoe Store</a>
         <div class="logout">
             <?php if(isset($_SESSION["admin_logged_in"])) {?>
