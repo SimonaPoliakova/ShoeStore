@@ -25,7 +25,6 @@ body {
 }
 
 a {
-  
     color: mediumblue;
 }
 
@@ -95,3 +94,52 @@ ul li a:hover {
   #login-form #register-url{
     color:darkgreen;
   }
+
+  /*pagination*/
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .pagination {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .pagination li {
+    margin-right: 5px;
+  }
+  
+  .pagination li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: #333;
+  }
+  
+  .pagination li a:hover {
+    background-color: #ccc;
+  }
+  
+  .pagination li.active a {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+  }
+  
+  .pagination li.disabled a {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .pagination li.disabled a:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+    color: #333;
+  }
+  
