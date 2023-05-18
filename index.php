@@ -7,7 +7,7 @@
             <h5>NEW ARRIVALS</h5>
             <h1><span>Best Prices</span> This Season</h1>
             <p>Eshop offers the best products for the most afforable prices</p>
-            <a href="bestsellers.html"><button class="btn">Shop now</button></a>
+            <a href="bestsellers.php"><button class="btn">Shop now</button></a>
         </div>
     </section>
 
@@ -37,7 +37,7 @@
                 <img class="img-fluid" src="assets/img/11.jpg"/>
                 <div class="details">
                     <h2>'One Piece' x Vans Sneaker Collaboration</h2>
-                    <a href="vans_onepiece.html" title="Čítať viac">
+                    <a href="vans_onepiece.php" title="Čítať viac">
                         Read more >
                         <i class="icon-right-open"></i>
                     </a>
@@ -49,7 +49,7 @@
                 <img class="img-fluid" src="assets/img/22.jpg"/>
                 <div class="details">
                     <h2>FILA Drops Footwear to Celebrate 'Rocko's Modern Life'</h2>
-                    <a href="fila_rocko.html" title="Čítať viac">
+                    <a href="fila_rocko.php" title="Čítať viac">
                         Read more >
                         <i class="icon-right-open"></i>
                     </a>
@@ -61,7 +61,7 @@
                 <img class="img-fluid" src="assets/img/33.jpg"/>
                 <div class="details">
                     <h2>adidas x Arsenal release French collection to mark 20 years since Invincibles season</h2>
-                    <a href="adidas_arsenal.html" title="Čítať viac">
+                    <a href="adidas_arsenal.php" title="Čítať viac">
                         Read more >
                         <i class="icon-right-open"></i>
                     </a>
@@ -108,7 +108,7 @@
         <div class="container">
             <h4>SEASON'S SALE</h4>
             <h1>Spring Collection <br> UP to 30% OFF</h1>
-            <a href="bestsellers.html"><button class="text-uppercase">shop now</button></a>
+            <a href="bestsellers.php"><button class="text-uppercase">shop now</button></a>
         </div>
     </section>
 
